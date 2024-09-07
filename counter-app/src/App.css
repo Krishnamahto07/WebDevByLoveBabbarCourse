@@ -1,0 +1,41 @@
+.App{
+  background: #2D4356;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  align-items: center;
+}
+.App-header{
+  font-size: xx-large;
+}
+.para{
+  color: #DDE6ED;
+}
+.outpur-field{
+  background: white;
+  display: flex;
+  flex-direction: row;
+}
+.digit-field{
+  color: #2D4356;
+  padding: 1rem 1.5rem;
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.line{
+  background: #2D4356;
+  margin: auto;
+  height: 80%;
+  width: 2px;
+}
+.btn{
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  color: #2D4356;
+  font-size: 15px;
+  cursor: pointer;
+}
