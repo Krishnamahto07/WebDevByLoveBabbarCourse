@@ -9,12 +9,7 @@ function App() {
     const temp = tours.filter( tour => id !== tour.id);
     setTours(temp);
   }
-  // return (
-  //   <div className="App">
-  //     <header>Plan with Yourself</header>
-  //     <Cards />
-  //   </div>
-  // );
+
   if(tours.length === 0) return (
     <div className="container">
       <div className="message">

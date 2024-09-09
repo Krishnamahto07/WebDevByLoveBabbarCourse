@@ -1,0 +1,91 @@
+.wrapper{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgb(167, 147, 147);
+  height: 100%;
+  width: 100vw;
+}
+
+.nav{
+  padding: 10px 0px;
+  text-align: center;
+  background: slategray;
+  font-size: xx-large;
+  color: white;
+  border-bottom:1px solid white ;
+}
+
+.btn-container{
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+}
+.btn{
+  cursor: pointer;
+  padding: 8px 15px;
+  background: slategray;
+  border: none;
+  color: white;
+}
+.cards{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.card{
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+
+}
+.image{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.img-container{
+  position: relative;
+}
+.h-btn{
+  position: absolute;
+  right: 4px;
+  bottom: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  
+  font-size: 25px;
+  padding-top: 5px;
+}
+.text-container{
+  background-color: rgb(68, 61, 61);
+  height: 100%;
+}
+.title{
+  margin:10px;
+  font-size: 20px;
+  color: white;
+}
+.desc{
+  padding: auto ;
+  margin: -5px 5px 0 5px;
+  
+}
+
+.selected{
+  border-radius: 5px;
+  border: 2px solid white;
+}
