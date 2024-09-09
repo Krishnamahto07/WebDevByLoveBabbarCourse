@@ -9,13 +9,14 @@ import Navbar from './container/Navbar';
 import { Button } from './container/Button';
 import { Cards } from './container/Cards';
   function App(){
-    // const notify = () => toast("Wow so easy!");
 
     const [courses , setCourses] = useState([]);
     const [category, setCategory] = useState(filterData[0].title);
+
     const clickHandler = (data,e) =>{
       setCategory(data.title)
     }
+    
     useEffect(()=>{
       const fetchData = async() =>{
         try {
@@ -30,10 +31,11 @@ import { Cards } from './container/Cards';
       }
       fetchData();
     },[])
+
     return (
       <div className='wrapper'>
         <Navbar/>
-        {/* Buttons section  */}
+
         <section className='btn-container'>
           {
             filterData.map((data,i)=>{
@@ -43,7 +45,7 @@ import { Cards } from './container/Cards';
           }
         </section>
         
-        <Cards courses={courses} category={category} />
+        <Cards  courses={courses} category={category} />
 
         <ToastContainer />
       </div>

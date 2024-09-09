@@ -1,16 +1,33 @@
-import React, { useState } from 'react'
-import { RiHeartFill } from "react-icons/ri";
-import { RiHeartLine } from "react-icons/ri";
-export const Card = ({course}) => {
+import { FcLikePlaceholder } from "react-icons/fc";
+import { FcLike } from "react-icons/fc";
+import { toast } from 'react-toastify';
+
+export const Card = ({course,likedCourses,setLikedCourses}) => {
     const {id, title,image,description }= course;
-    const [liked, setLiked] = useState(false);
+
+    function likeHandler(){
+        if(likedCourses.includes(id)){
+            setLikedCourses((prev)=> prev.filter((cid) => cid !== course.id));
+            toast.warning("Liked removed ....");
+        }
+        else {
+            if(likedCourses.length === 0){
+                setLikedCourses([id]);
+            }
+            else {
+                setLikedCourses((prev) => [...prev, course.id]);
+            }   
+            toast.success("Liked new course");
+        }
+    }
+    
   return (
     <div className='card'>
         <div className='img-container'>
             <img src={image.url} alt='image' loading='lazy' className='image' />
-            <button className='h-btn' onClick={()=>setLiked(!liked)}>      
+            <button className='h-btn' onClick={()=>likeHandler()}>      
                 {
-                    liked ? <RiHeartFill /> : <RiHeartLine /> 
+                    likedCourses.includes(id) ? <FcLike /> : <FcLikePlaceholder />
                 }
             </button>
         </div>
